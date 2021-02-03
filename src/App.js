@@ -19,12 +19,6 @@ import { Button, Checkbox,
 
 import { Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle } from '@material-ui/core/';
 
-//
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-// import { faCheckSquare, faCoffee } from '@fortawesome/fontawesome-free-solid'
-
-
-
 import './buyMeACoffeeStyle.css';
 
 
@@ -155,7 +149,7 @@ export default class App extends React.Component {
 
 
       jsonAPICalls.calls = jsonAPICalls.calls.filter(obj => (new Date().getTime() / 1000) - (parseInt(obj.time) / 1000) <= 300);
-      console.log(jsonAPICalls.calls);
+      // console.log(jsonAPICalls.calls);
 
       callCount = jsonAPICalls.calls.reduce(function(prev, cur) {
         return prev + parseInt(cur.count);
@@ -167,7 +161,6 @@ export default class App extends React.Component {
 
   search = async (id, getChildrenArticles) => {
 
-    console.log('url', id);
 
     let [APICalls, jsonAPICalls, callCount] =  await this.getAPICalls();
 
@@ -202,7 +195,7 @@ export default class App extends React.Component {
     const out1 = await fetch(urlSearch);
     const out2 = await out1.text();
 
-    console.log(out2);
+    // console.log(out2);
 
     const firstSection = out2.slice(out2.indexOf("<entry>"));
     const closerSection = firstSection.slice(firstSection.indexOf("<id>http://arxiv.org/") + 21, firstSection.indexOf("</id>"));
@@ -281,7 +274,7 @@ export default class App extends React.Component {
       // elem: document.getElementById("graphy")
 
     });
-    console.log(nodes, links);
+    // console.log(nodes, links);
   };
 
   setId = () => {
@@ -425,7 +418,7 @@ export default class App extends React.Component {
       id = searchString;
     }
 
-    console.log('id:', id);
+    // console.log('id:', id);
 
     this.setState({loading: true, loadingProgress: 0});
     let [firstArticle, parentArticles, childrenArticles] = [{}, {}, {}];

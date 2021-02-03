@@ -444,7 +444,6 @@ export default class App extends React.Component {
     this.setId();
     document.getElementById("submitButton").style.marginTop = "15px";
     document.getElementById("submitButton").style.height = "56px";
-    document.getElementById("submitButton").style.marginRight = null;
     document.getElementById("toggleAbstractsButton").style.display = "initial";
     document.getElementById("settingsButton").style.display = "initial";
     document.getElementById("helpButton").style.display = "initial";
@@ -482,7 +481,7 @@ export default class App extends React.Component {
         id="submitButton"
         variant="outlined"
         disabled={!(this.state.ready)}
-        style={{color: "white", textTransform: "none", fontFamily: '"Palatino Linotype", "Book Antiqua", Palatino, serif', height: '40px', marginRight: '-64px'}}
+        style={{color: "white", textTransform: "none", fontFamily: '"Palatino Linotype", "Book Antiqua", Palatino, serif', height: '40px'}}
         onClick={async () => {
          this.handleSearch();
        }}
@@ -597,7 +596,7 @@ export default class App extends React.Component {
           <MenuItem value={'td'} style={{fontFamily: '"Palatino Linotype", "Book Antiqua", Palatino, serif'}}>Top Down</MenuItem>
       </Select>
       </FormControl>
-      <Button id="infoButton" onClick={this.handleClickAbout} style={{float: "inline-end"}}>
+      <Button id="infoButton" onClick={this.handleClickAbout} style={{display: "inlineBlock", position: "absolute", right: '0'}}>
       <Tooltip TransitionComponent={Zoom} style={{fontFamily: '"Palatino Linotype", "Book Antiqua", Palatino, serif'}} title={"About"}>
       <InfoIcon style={{color: '#adadad'}}/></Tooltip></Button>
         <Dialog
@@ -644,7 +643,7 @@ export default class App extends React.Component {
                   fontSize: "30px", 
                   fontFamily: '"Roboto", sanserif', 
                   lineHeight: "1.4", 
-                  background: "url('http://s2-public-api-prod.us-west-2.elasticbeanstalk.com/logo.svg') no-repeat"}}>
+                  background: "url('/s2logo.svg') no-repeat"}}>
               Semantic Schi</a>
               API to collect information and links on research papers (including their citations & references) using various paper IDs. <br/><br/>
               Since there are many formats for cataloging research papers (DOI, ArXiv ID, S2 Paper ID, ACL ID), we have to infer the ID type

@@ -548,9 +548,12 @@ export default class App extends React.Component {
             label=<p style={{fontFamily: '"Palatino Linotype", "Book Antiqua", Palatino, serif'}}>Grandchildren (the articles that cited articles that cited the main article)</p>
           />
         </FormGroup>
-          </FormControl>
-          </DialogContent>
-          </Dialog>
+        </FormControl>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={this.handleCloseSettings} style={{fontFamily: '"Palatino Linotype", "Book Antiqua", Palatino, serif', color: "white", textTransform: "none", fontSize: "24px"}}>Go back</Button>
+        </DialogActions>
+      </Dialog>
       <Button id="helpButton" onClick={this.handleClickOpen} style={{display: "none", marginTop: "15px"}}>
       <Tooltip TransitionComponent={Zoom} style={{fontFamily: '"Palatino Linotype", "Book Antiqua", Palatino, serif'}} title={"View Help"}>
       <HelpIcon style={{color: '#adadad'}}/></Tooltip></Button>

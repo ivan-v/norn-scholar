@@ -1,0 +1,76 @@
+.bmc-button img{height: 34px !important;width: 35px !important;margin-bottom: 1px !important;box-shadow: none !important;border: none !important;vertical-align: middle !important;}.bmc-button{padding: 7px 15px 7px 10px !important;line-height: 35px !important;height:51px !important;text-decoration: none !important;display:inline-flex !important;color:#FFFFFF !important;background-color:#FF813F !important;border-radius: 5px !important;border: 1px solid transparent !important;padding: 7px 15px 7px 10px !important;font-size: 22px !important;letter-spacing: 0.6px !important;box-shadow: 0px 1px 2px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;margin: 0 auto !important;font-family:'Cookie', cursive !important;-webkit-box-sizing: border-box !important;box-sizing: border-box !important;}.bmc-button:hover, .bmc-button:active, .bmc-button:focus {-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;text-decoration: none !important;box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;opacity: 0.85 !important;color:#FFFFFF !important;}
+<style>
+
+.effect:nth-child(2) {
+  margin-top: 50px;
+}
+.effect:nth-child(2n+1) {
+  background-color: #222;
+}
+.effect:nth-child(2n+1) h2 {
+  color: #212121;
+}
+.effect:nth-child(2n) a {
+  color: #fff;
+  border-color: #fff;
+}
+.effect .buttons {
+  margin-top: 50px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+
+.effect a {
+  text-decoration: none !important;
+  width: 60px;
+  height: 60px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+  margin-right: 20px;
+  font-size: 25px;
+  overflow: hidden;
+  position: relative;
+  color: white;
+  border: 2px solid #3ca0e7;
+}
+.effect a i {
+  position: relative;
+  z-index: 3;
+}
+.effect a:last-child {
+  margin-right: 0px;
+}
+.effect a:before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.effect.thurio a {
+  -webkit-transition: border-radius 0.2s linear 0s;
+  transition: border-radius 0.2s linear 0s;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.effect.thurio a i {
+  -webkit-transition: -webkit-transform 0.01s linear 0s;
+  transition: -webkit-transform 0.01s linear 0s;
+  transition: transform 0.01s linear 0s;
+  transition: transform 0.01s linear 0s, -webkit-transform 0.01s linear 0s;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.effect.thurio a:hover {
+  border-radius: 0px;
+  background: black ;
+  border-color: #3ca0e7;
+  /*transition: ease-in-out;*/
+}

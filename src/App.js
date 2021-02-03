@@ -639,7 +639,7 @@ export default class App extends React.Component {
 
               Available for direct reading are about 192 million papers, with millions more also indexed. <br/><br/>
 
-              This project uses 
+              This project uses &nbsp;
               <a href="https://www.semanticscholar.org?utm_source=api" 
                 style={{
                   color: "#2222", 
@@ -647,7 +647,7 @@ export default class App extends React.Component {
                   fontFamily: '"Roboto", sanserif', 
                   lineHeight: "1.4", 
                   background: "url('/s2logo.svg') no-repeat"}}>
-              Semantic Schi</a>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;</a>
               API to collect information and links on research papers (including their citations & references) using various paper IDs. <br/><br/>
               Since there are many formats for cataloging research papers (DOI, ArXiv ID, S2 Paper ID, ACL ID), we have to infer the ID type
               from the input before making a call to Semantic Scholar. Additionally, if it is not an ID, we search arXiv through their API, return the first result, 

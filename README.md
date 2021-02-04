@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+# Norn Scholar
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+In-browser tool for research, combining search with interactive graphical representation of research papers.
 
-## Available Scripts
+Site version: https://www.nornscholar.com
 
-In the project directory, you can run:
+![](screencapture.gif)
 
-### `npm start`
+## Motivation
+Although research papers have been around since the 17th century, the main method of exploring connected papers through references and citations has fundamentally remained the same: copy article names from the bibliography, and search for them one by one. This approach is incredibly slow, and although made more convenient through modern tools like Google Scholar, there is still no visualization, and only the closest neighbors of an article are immediately accessible.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Norn Scholar aims to make research significantly faster and more pleasant by providing a graphical interface of papers, from where the user can immediately see all the papers referenced from an article, and right-click to go immediately read any one of them. Additionally, the user can immediately see if certain grandparent papers are more influential than others in the field, and how they may bridge different clusters of connected papers.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Name Meaning
+The Norns in Norse mythology are three "maidens deep in knowledge" who rule the destiny of gods and men. They live by the lake under the world-tree Yggdrasil, watering it so that its branches do not rot. 
 
-### `npm test`
+## APIs Used
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To find research papers' authors, citations, references, and link by catalog ID
+- Semantic Scholar API:
+https://api.semanticscholar.org/
 
-### `npm run build`
+To find a research paper by keyword/name/author search:
+- arXiv API:
+https://arxiv.org/help/api/basics
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Libraries Used
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### For Function
 
-### `npm run eject`
+- React.js for building a modern web interface
+https://reactjs.org/
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Vasco Asturiano's incredible force graph library    
+    (which is itself built on d3.js https://d3js.org/)   
+https://github.com/vasturiano/force-graph
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### For Styling
+- Material UI for a clean, minimalist design:
+https://material-ui.com/
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- Typist for fancy, dynamic text animation: 
+https://github.com/jstejada/react-typist
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- Some pretty icons (besides those from Material UI):
+https://fontawesome.com/
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Future Work
+- [ ] Add other API searches for research papers and journals (besides arXiv's):     
+https://guides.lib.berkeley.edu/information-studies/apis    
+- [ ] Add a mode to look at the intersection of common related articles when given several input articles
+- [ ] Query all articles by a given author
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+ 
+## Author
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Ivan Viro**

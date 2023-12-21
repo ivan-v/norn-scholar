@@ -2,6 +2,8 @@
 
 In-browser tool for research, combining search with interactive graphical representation of research papers.
 
+The first version of the project is ready; however, further developments are currently on hold.
+
 Site version: https://www.nornscholar.com
 
 ![](screencapture.gif)
